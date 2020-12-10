@@ -21,22 +21,30 @@ namespace PharmacyMedicineSupplyService.Provider
         public async Task<List<PharmacyMedicineSupply>> GetSupply(List<MedicineDemand> medicines)
         {
             pharmacies = supplyRepo.GetPharmacies();
-            foreach(var m in medicines)
+            foreach (var m in medicines)
             {
                 int stockCount = await GetStock(m.Medicine);
-                if (stockCount < m.DemandCount)
-                    m.DemandCount = stockCount;
-                int indSupply = (m.DemandCount) / pharmacies.Count;
-                foreach (var i in pharmacies)
+                if (stockCount != -1)
                 {
-                    pharmacySupply.Add(new PharmacyMedicineSupply { MedicineName = m.Medicine, PharmacyName = i, SupplyCount = indSupply });
+                    if (stockCount < m.DemandCount)
+                        m.DemandCount = stockCount;
+                    int indSupply = (m.DemandCount) / pharmacies.Count;
+                    foreach (var i in pharmacies)
+                    {
+                        pharmacySupply.Add(new PharmacyMedicineSupply { MedicineName = m.Medicine, PharmacyName = i, SupplyCount = indSupply });
+                    }
+                    if (m.DemandCount > indSupply * pharmacies.Count)
+                    {
+                        pharmacySupply[pharmacySupply.Count - 1].SupplyCount += (m.DemandCount - indSupply * pharmacies.Count);
+                    }
                 }
-                if (m.DemandCount > indSupply * pharmacies.Count)
+                else
                 {
-                    pharmacySupply[pharmacySupply.Count - 1].SupplyCount += (m.DemandCount - indSupply * pharmacies.Count);
+                    return null;
                 }
+                return pharmacySupply;
             }
-            return pharmacySupply;
+            
         }
         public async Task<int> GetStock(string medicineName)
         {
