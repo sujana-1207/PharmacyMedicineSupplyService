@@ -31,13 +31,13 @@ namespace PharmacyMedicineSupplyService.Controllers
                     _log4net.Info("Pharmacy supply details successfully retrieved and sent.");
                     return new OkObjectResult(res);
                 }
-                _log4net.Error("No details retrieved");
-                return new NoContentResult();
+                _log4net.Info("No details retrieved");
+                return Content("No such details found please try again.");
             }
             catch(Exception e)
             {
                 _log4net.Error("Excpetion:" + e.Message + " has occurred while trying to retrieve supply info.");
-                return new BadRequestResult();
+                return Content("The following exception has occurred while processing your request."+e.Message+" Please try again");
             }
 
             

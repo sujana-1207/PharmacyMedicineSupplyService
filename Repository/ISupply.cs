@@ -7,6 +7,6 @@ namespace PharmacyMedicineSupplyService.Repository
 {
     public interface ISupply
     {
-        public List<string> GetPharmacies();
+        public List<PharmacyDTO> GetPharmacies();
     }
 }

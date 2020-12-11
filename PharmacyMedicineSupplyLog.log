@@ -323,3 +323,37 @@ INFO  02:37:56 Hosting environment: Development
 INFO  02:37:56 Content root path: C:\Users\Lenovo\source\repos\PharmacyMedicineSupplyService
 INFO  02:37:56 Content root path: C:\Users\Lenovo\source\repos\PharmacyMedicineSupplyService
 INFO  02:39:56 Pharmacy supply details successfully retrieved and sent.
+INFO  04:26:18 Application started. Press Ctrl+C to shut down.
+INFO  04:26:18 Application started. Press Ctrl+C to shut down.
+INFO  04:26:18 Hosting environment: Development
+INFO  04:26:18 Hosting environment: Development
+INFO  04:26:18 Content root path: C:\Users\Lenovo\source\repos\PharmacyMedicineSupplyService
+INFO  04:26:18 Content root path: C:\Users\Lenovo\source\repos\PharmacyMedicineSupplyService
+INFO  04:29:42 Pharmacies Data retieved
+ERROR 04:29:48 Excpetion:No connection could be made because the target machine actively refused it. has occurred while trying to retrieve supply info.
+INFO  04:32:11 Pharmacies Data retieved
+INFO  04:32:20 No data was gound in stock
+INFO  04:32:20 No data was gound in stock
+INFO  04:32:20 Medicines have been successfully supplied to the pharmacies
+INFO  04:32:20 Pharmacy supply details successfully retrieved and sent.
+INFO  04:32:25 Pharmacies Data retieved
+INFO  04:32:25 No data was gound in stock
+INFO  04:32:25 No data was gound in stock
+INFO  04:32:25 Medicines have been successfully supplied to the pharmacies
+INFO  04:32:25 Pharmacy supply details successfully retrieved and sent.
+INFO  04:33:47 Pharmacies Data retieved
+INFO  04:34:02 No data was gound in stock
+INFO  04:34:14 No data was gound in stock
+INFO  04:34:14 Medicines have been successfully supplied to the pharmacies
+INFO  04:34:14 Pharmacy supply details successfully retrieved and sent.
+INFO  04:34:57 Application started. Press Ctrl+C to shut down.
+INFO  04:34:57 Application started. Press Ctrl+C to shut down.
+INFO  04:34:57 Hosting environment: Development
+INFO  04:34:57 Hosting environment: Development
+INFO  04:34:57 Content root path: C:\Users\Lenovo\source\repos\PharmacyMedicineSupplyService
+INFO  04:34:57 Content root path: C:\Users\Lenovo\source\repos\PharmacyMedicineSupplyService
+INFO  04:35:08 Pharmacies Data retieved
+INFO  04:35:09 Retrieved data from medicine stock service
+INFO  04:35:09 Retrieved data from medicine stock service
+INFO  04:35:09 Medicines have been successfully supplied to the pharmacies
+INFO  04:35:09 Pharmacy supply details successfully retrieved and sent.
